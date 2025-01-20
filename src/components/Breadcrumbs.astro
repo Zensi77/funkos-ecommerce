@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const url = Astro.url.pathname;
+const text =
+  url === "/peliculas"
+    ? "Funkos peliculas"
+    : url === "/series"
+      ? "Funkos series"
+      : url === "/exclusivos"
+        ? "Funkos exclusivos"
+        : "";
+---
+
+<div class="row">
+  <div class="col-12">
+    <h4>
+      Usted esta aqui >
+      <a class="text-secondary text-decoration-none" href="/"> Inicio </a>
+      {text ? ` > ${text}` : ""}
+    </h4>
+  </div>
+</div>

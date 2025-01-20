@@ -1,0 +1,15 @@
+@import "bootstrap/scss/functions";
+
+$primary: #f28c28;
+$secondary: #4a6fa5;
+$danger: #e07a5f;
+$light: #f0f4f8;
+$dark: #2d2d2d;
+
+$body-bg: $primary; // Background del body
+$nav-dark-link-active-color: #000000; // Color de los links activos
+$nav-dark-link-hover-color: #000000; // Color de los links al pasar el mouse
+
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/bootstrap.scss";

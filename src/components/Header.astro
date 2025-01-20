@@ -1,0 +1,50 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const items = [
+  { href: "/", text: "Inicio" },
+  { href: "/peliculas", text: "Funkos peliculas" },
+  { href: "/series", text: "Funkos series" },
+  { href: "/exclusivos", text: "Funkos exclusivos" },
+];
+
+const url = Astro.url.pathname;
+---
+
+<header
+  class="d-flex px-5 w-100 bg-primary navbar rounded-bottom navbar-dark flex-wrap align-items-center justify-content-between py-3 mb-4 border-bottom position-sticky"
+>
+  <div class="mb-2 mb-md-0">
+    <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+      <img
+        src="logo-2.jpg"
+        class="rounded-4"
+        width="100"
+        alt="Logotipo de la empresa"
+      />
+    </a>
+  </div>
+
+  <ul class="nav mb-2 justify-content-center mb-md-0">
+    {
+      items.map((item) => {
+        return (
+          <li class="text-dark">
+            <a
+              href={item.href}
+              class={`fw-bolder nav-link px-2 ${url === item.href ? "active text-dark" : "text-light"}`}
+            >
+              {item.text}
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
+
+  <div class="d-flex text-end fs-4 gap-4">
+    <i class="bi bi-cart4"></i>
+    <i class="bi bi-box-arrow-right"></i>
+    <i class="bi bi-list"></i>
+  </div>
+</header>
