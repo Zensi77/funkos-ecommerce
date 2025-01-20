@@ -4,6 +4,13 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Breadcrumbs from "../components/Breadcrumbs.astro";
 import { ClientRouter } from "astro:transitions";
+import AOSInitializer from "../components/aos-init";
+
+interface Props {
+  title: string;
+  pageDescription: string;
+}
+const { title, pageDescription } = Astro.props;
 ---
 
 <!doctype html>
@@ -12,21 +19,23 @@ import { ClientRouter } from "astro:transitions";
     <ClientRouter />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={pageDescription} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <meta name="generator" content={Astro.generator} />
-    <title>Funko Ecommerce</title>
+    <title>Funkonnection | {title}</title>
   </head>
   <body class="bg-light">
     <Header />
-    <div class="container">
+    <div class="container text-dark">
       <Breadcrumbs />
       <slot />
     </div>
     <Footer />
+    <AOSInitializer client:load />
   </body>
 </html>
 

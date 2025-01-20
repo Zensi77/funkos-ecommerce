@@ -1,6 +1,4 @@
 ---
-import Layout from "../layouts/Layout.astro";
-
 const items = [
   { href: "/", text: "Inicio" },
   { href: "/peliculas", text: "Funkos peliculas" },
@@ -12,14 +10,14 @@ const url = Astro.url.pathname;
 ---
 
 <header
-  class="d-flex px-5 w-100 bg-primary navbar rounded-bottom navbar-dark flex-wrap align-items-center justify-content-between py-3 mb-4 border-bottom position-sticky"
+  class="d-flex px-5 w-100 bg-primary navbar rounded-bottom-4 navbar-dark flex-wrap align-items-center justify-content-between py-3 mb-4 border-bottom position-sticky"
 >
   <div class="mb-2 mb-md-0">
     <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
       <img
         src="logo-2.jpg"
         class="rounded-4"
-        width="100"
+        width="120"
         alt="Logotipo de la empresa"
       />
     </a>

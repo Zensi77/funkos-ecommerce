@@ -1,5 +1,42 @@
 ---
+import Container from "../components/Container.astro";
 import Layout from "../layouts/Layout.astro";
+
+const masVendidos = [
+  { name: "Funko 1", price: 100, img: "/articles/funko1.jpg" },
+  { name: "Funko 2", price: 200, img: "/articles/funko2.jpg" },
+  //   { name: "Funko 3", price: 300, img: "/funko3.jpg" },
+];
 ---
 
-<Layout />
+<Layout
+  title="Inicio"
+  pageDescription="Página de inicio de Funkonnection, tienda de funkos en línea lider en el sector"
+>
+  <div class="container-fluid">
+    <div class="row mt-5">
+      <div class="col-10">
+        <Container
+          title="FUNKOS MAS VENDIDOS EN STOCK"
+          articles={masVendidos}
+          animation="fade-right"
+          duration="1000"
+          delay="0"
+        />
+      </div>
+      <div class="col-2"></div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-2"></div>
+      <div class="col-10">
+        <Container
+          title="ULTIMAS NOVEDADES EN STOCK"
+          articles={masVendidos}
+          animation="fade-left"
+          duration="1000"
+          delay="100"
+        />
+      </div>
+    </div>
+  </div>
+</Layout>
