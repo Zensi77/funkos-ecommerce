@@ -1,26 +1,22 @@
+---
+import { Image } from "astro:assets";
+import twitter from "../assets/icons/twitter.png";
+import facebook from "../assets/icons/facebook.png";
+import instagram from "../assets/icons/instagram.png";
+import applePay from "../assets/icons/apple-pay.png";
+import visa from "../assets/icons/visa.png";
+import mastercard from "../assets/icons/mastercard.png";
+import paypal from "../assets/icons/paypal.png";
+---
+
 <footer class="w-100 bg-primary fw-bold rounded-top-4 mt-3">
   <div class="container">
     <div class="row p-3">
       <div class="col-2">
         <div class="d-flex flex-column align-items-center gap-3">
-          <img
-            role="button"
-            src="/icons/instagram.png"
-            alt="Logo instagram"
-            width="48"
-          />
-          <img
-            role="button"
-            src="/icons/twitter.png"
-            alt="Logo instagram"
-            width="48"
-          />
-          <img
-            role="button"
-            src="/icons/facebook.png"
-            alt="Logo instagram"
-            width="48"
-          />
+          <Image src={twitter} alt="Logo twitter" width="48" />
+          <Image src={facebook} alt="Logo facebook" width="48" />
+          <Image src={instagram} alt="Logo instagram" width="48" />
         </div>
       </div>
       <div class="col-5">
@@ -45,14 +41,10 @@
         class="col-12 d-flex justify-content-around align-items-center gap-3"
       >
         <h3 class="ml-5">FORMAS DE PAGO</h3>
-        <img
-          src="/icons/apple-pay.png"
-          alt="Logo american express"
-          width="48"
-        />
-        <img src="/icons/visa.png" alt="Logo visa" width="48" />
-        <img src="/icons/mastercard.png" alt="Logo mastercard" width="48" />
-        <img src="/icons/paypal.png" alt="Logo paypal" width="48" />
+        <Image src={applePay} alt="Logo apple pay" width="48" />
+        <Image src={visa} alt="Logo visa" width="48" />
+        <Image src={mastercard} alt="Logo mastercard" width="48" />
+        <Image src={paypal} alt="Logo paypal" width="48" />
       </div>
     </div>
   </div>

@@ -3,8 +3,8 @@ import Container from "../components/Container.astro";
 import Layout from "../layouts/Layout.astro";
 
 const masVendidos = [
-  { name: "Funko 1", price: 100, img: "/articles/funko1.jpg" },
-  { name: "Funko 2", price: 200, img: "/articles/funko2.jpg" },
+  { name: "Funko 1", price: 100, img: "articles/funko1.jpg" },
+  { name: "Funko 2", price: 200, img: "articles/funko2.jpg" },
   //   { name: "Funko 3", price: 300, img: "/funko3.jpg" },
 ];
 ---
@@ -37,6 +37,10 @@ const masVendidos = [
           delay="100"
         />
       </div>
+    </div>
+
+    <div class="row">
+      <h4 class="text-dark">En que nos destacamos?</h4>
     </div>
   </div>
 </Layout>

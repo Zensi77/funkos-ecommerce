@@ -5,11 +5,18 @@ interface Props {
   img: string;
 }
 const { name, price, img } = Astro.props;
-console.log(name, price, img);
+
+import { Image } from "astro:assets";
+const imgSrc = await import(`../assets/${img}`);
 ---
 
 <div class="card bg-light shadow-lg" style="width: 10rem;">
-  <img class="card-img-top" src={img} alt="Card image cap" />
+  <Image
+    class="card-img-top object-fit-cover p-3"
+    src={imgSrc.default}
+    alt="Card image cap"
+    width={150}
+  />
   <div class="card-body">
     <h5 class="card-title text-center">{name}</h5>
     <h6 class="card-subtitle mb-2 text-muted text-center">

@@ -1,4 +1,7 @@
 ---
+import { Image } from "astro:assets";
+import logo2 from "../assets/logo-2.jpg";
+
 const items = [
   { href: "/", text: "Inicio" },
   { href: "/peliculas", text: "Funkos peliculas" },
@@ -14,12 +17,7 @@ const url = Astro.url.pathname;
 >
   <div class="mb-2 mb-md-0">
     <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
-      <img
-        src="logo-2.jpg"
-        class="rounded-4"
-        width="120"
-        alt="Logotipo de la empresa"
-      />
+      <Image class="rounded-3" src={logo2} alt="Logo" width="120" />
     </a>
   </div>
 
