@@ -1,11 +1,51 @@
 ---
+import Card from "../components/Card.astro";
 import Container from "../components/Container.astro";
 import Layout from "../layouts/Layout.astro";
 
 const masVendidos = [
-  { name: "Funko 1", price: 100, img: "articles/funko1.jpg" },
-  { name: "Funko 2", price: 200, img: "articles/funko2.jpg" },
+  { name: "Funko 1", price: "15", img: "/articles/funko1.jpg" },
+  { name: "Funko 2", price: "20", img: "/articles/funko2.jpg" },
   //   { name: "Funko 3", price: 300, img: "/funko3.jpg" },
+];
+
+const ultimasNovedades = [
+  { name: "Funko 1", price: "15", img: "/articles/funko1.jpg" },
+  { name: "Funko 2", price: "20", img: "/articles/funko2.jpg" },
+  //   { name: "Funko 3", price: 300, img: "/funko3.jpg" },
+];
+
+const carrousellItems = [
+  {
+    title: "Productos originales",
+    description: `Todos nuestros productos vienen con su certificado garantizando su completa autenticidad. Seguimos un estricto protocolo ante la venta de replicas`,
+    img: "/original.jpeg",
+  },
+  {
+    title: "Envios en 24hs",
+    description: `Haz tu pedido hoy y recibe tu producto mañana. (Solo aplicable a peninsula, Baleares varia de 3 a 5 dias) Si no lo recibes al dia siguiente recibiras como compensacion un cupon del 5% en tu proxima compra`,
+    img: "/fast.png",
+  },
+  {
+    title: "Atencion al cliente",
+    description: `Nuestro equipo de atencion al cliente esta disponible las 24hs del dia para resolver cualquier duda o problema que puedas tener. No dudes en contactarnos`,
+    img: "/support.png",
+  },
+  {
+    title: "Ofertas flash",
+    description: `No te pierdas nuestras ofertas flash. Todos los dias a las 12:00h y a las 18:00h tendras una oportunidad unica de conseguir tu funko favorito a un precio inigualable`,
+    img: "/flash.jpeg",
+  },
+  {
+    title: "Envios gratis",
+    description: `Realiza una compra superior a 50€ y te enviaremos tu pedido completamente gratis. No dejes pasar esta oportunidad y ahorra en tus envios`,
+    img: "/envio.jpeg",
+  },
+  {
+    title: "Catalogo de puntos",
+    description: `Por cada compra que realices acumularas puntos que podras canjear por descuentos en tus proximas compras. No dejes pasar esta oportunidad y ahorra en tus compras`,
+    img: "/puntos.jpeg",
+  },
 ];
 ---
 
@@ -18,7 +58,7 @@ const masVendidos = [
       <div class="col-10">
         <Container
           title="FUNKOS MAS VENDIDOS EN STOCK"
-          articles={masVendidos}
+          articles={ultimasNovedades}
           animation="fade-right"
           duration="1000"
           delay="0"
@@ -39,8 +79,130 @@ const masVendidos = [
       </div>
     </div>
 
-    <div class="row">
-      <h4 class="text-dark">En que nos destacamos?</h4>
+    <div class="row mt-5" data-aos="fade-up" data-aos-duration="1000">
+      <h3 class="text-dark text-center fw-bold">En que nos destacamos?</h3>
+
+      <div
+        id="about"
+        class="carousel slide shadow-lg rounded-3 p-5"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div
+              class="d-flex gap-5 justify-content-center"
+              style="height: 400px;"
+            >
+              <Card
+                title={carrousellItems[0].title}
+                subtitle={carrousellItems[0].description}
+                img={carrousellItems[0].img}
+                width={20}
+                imgSize={200}
+              />
+              <Card
+                title={carrousellItems[1].title}
+                subtitle={carrousellItems[1].description}
+                img={carrousellItems[1].img}
+                width={20}
+                imgSize={200}
+              />
+              <Card
+                title={carrousellItems[2].title}
+                subtitle={carrousellItems[2].description}
+                img={carrousellItems[2].img}
+                width={20}
+                imgSize={200}
+              />
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div
+              class="d-flex gap-5 justify-content-center"
+              style="height: 400px;"
+            >
+              <Card
+                title={carrousellItems[3].title}
+                subtitle={carrousellItems[3].description}
+                img={carrousellItems[3].img}
+                width={20}
+                imgSize={200}
+              />
+              <Card
+                title={carrousellItems[4].title}
+                subtitle={carrousellItems[4].description}
+                img={carrousellItems[4].img}
+                width={20}
+                imgSize={200}
+              />
+              <Card
+                title={carrousellItems[5].title}
+                subtitle={carrousellItems[5].description}
+                img={carrousellItems[5].img}
+                width={20}
+                imgSize={200}
+              />
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#about"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"
+          ></span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#about"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon bg-dark" aria-hidden="true"
+          ></span>
+        </button>
+      </div>
+    </div>
+
+    <div
+      class="row mt-5 text-center"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
+      <h3 class="fw-bold">¿Qué son los productos Funko y su historia?</h3>
+      <p>
+        Funko es una empresa estadounidense fundada a finales de los 90 que se
+        ha consolidado como uno de los líderes mundiales en la fabricación de
+        juguetes de cultura pop. Originalmente, Funko creó las figuras “bobble
+        head”, famosas por sus cabezas que se movían gracias a un muelle. Sin
+        embargo, el gran éxito llegó en 2010 cuando, bajo la dirección de Brian
+        Mariotti, lanzaron los icónicos Funko Pop, que desde entonces han
+        vendido millones de unidades a nivel global.
+      </p>
+      <h3 class="fw-bold">¿Qué son los muñecos Funko Pop?</h3>
+      <p>
+        Los Funko Pop son figuras de vinilo que destacan por su diseño
+        característico: cabezas grandes y cuerpos pequeños, inspirados en el
+        estilo chibi japonés. Aunque el formato regular mide 9 cm, Funko ha
+        expandido su catálogo con figuras más grandes y dioramas que representan
+        escenas famosas de películas y videojuegos.
+      </p>
+      <h3 class="fw-bold">¿Cuáles son las licencias más populares de Funko?</h3>
+      <p>
+        Funko ha sabido asociarse con grandes franquicias del entretenimiento,
+        obteniendo licencias de sagas tan populares como Harry Potter, Star
+        Wars, Marvel, DC Comics y muchas más. Estas alianzas han permitido a
+        Funko atraer tanto a fanáticos casuales como a coleccionistas.
+      </p>
+      <h3 class="fw-bold">¿Qué diferencia a Funkonnection?</h3>
+      <p>
+        En Funkonnection, nos especializamos en ofrecer tanto Funko Pop actuales
+        como figuras descatalogadas y premium. Todos nuestros productos son
+        originales, y trabajamos para ofrecer la mejor experiencia tanto para
+        coleccionistas como para nuevos compradores.
+      </p>
     </div>
   </div>
 </Layout>

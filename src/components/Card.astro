@@ -1,26 +1,28 @@
 ---
 interface Props {
-  name: string;
-  price: number;
+  title: string;
+  subtitle: string;
   img: string;
+  width?: number;
+  imgSize?: number;
 }
-const { name, price, img } = Astro.props;
+const { title, subtitle, img, width = 10, imgSize = 150 } = Astro.props;
 
 import { Image } from "astro:assets";
-const imgSrc = await import(`../assets/${img}`);
 ---
 
-<div class="card bg-light shadow-lg" style="width: 10rem;">
+<div class="card bg-light shadow-lg" style={`width: ${width}rem;`}>
   <Image
-    class="card-img-top object-fit-cover p-3"
-    src={imgSrc.default}
+    class="card-img-top p-3"
+    src={img}
     alt="Card image cap"
-    width={150}
+    width={imgSize}
+    height={imgSize}
   />
   <div class="card-body">
-    <h5 class="card-title text-center">{name}</h5>
+    <h5 class="card-title text-center">{title}</h5>
     <h6 class="card-subtitle mb-2 text-muted text-center">
-      {price} $
+      {subtitle} $
     </h6>
   </div>
 </div>

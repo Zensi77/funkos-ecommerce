@@ -1,6 +1,5 @@
 ---
 import { Image } from "astro:assets";
-import logo2 from "../assets/logo-2.jpg";
 
 const items = [
   { href: "/", text: "Inicio" },
@@ -13,34 +12,55 @@ const url = Astro.url.pathname;
 ---
 
 <header
-  class="d-flex px-5 w-100 bg-primary navbar rounded-bottom-4 navbar-dark flex-wrap align-items-center justify-content-between py-3 mb-4 border-bottom position-sticky"
+  class="d-flex px-5 w-100 bg-primary navbar navbar-expand-lg rounded-bottom-4 navbar-dark flex-wrap align-items-center justify-content-between py-3 mb-4 border-bottom position-sticky"
 >
   <div class="mb-2 mb-md-0">
     <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
-      <Image class="rounded-3" src={logo2} alt="Logo" width="120" />
+      <Image
+        class="rounded-3"
+        src={"/logo-2.jpg"}
+        alt="Logo"
+        width="120"
+        height="100"
+      />
     </a>
   </div>
 
-  <ul class="nav mb-2 justify-content-center mb-md-0">
-    {
-      items.map((item) => {
-        return (
-          <li class="text-dark">
-            <a
-              href={item.href}
-              class={`fw-bolder nav-link px-2 ${url === item.href ? "active text-dark" : "text-light"}`}
-            >
-              {item.text}
-            </a>
-          </li>
-        );
-      })
-    }
-  </ul>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-  <div class="d-flex text-end fs-4 gap-4">
-    <i class="bi bi-cart4"></i>
-    <i class="bi bi-box-arrow-right"></i>
-    <i class="bi bi-list"></i>
+  <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+    <ul class="navbar-nav mx-auto">
+      {
+        items.map((item) => {
+          return (
+            <li class="text-dark">
+              <a
+                href={item.href}
+                class={`fw-bolder nav-link px-2 ${url === item.href ? "active text-dark" : "text-light"}`}
+              >
+                {item.text}
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+
+    <div
+      class="d-flex fs-4 gap-4 justify-content-center justify-content-lg-end"
+    >
+      <i class="bi bi-cart4 fs-4"></i>
+      <i class="bi bi-box-arrow-right fs-4"></i>
+    </div>
   </div>
 </header>
