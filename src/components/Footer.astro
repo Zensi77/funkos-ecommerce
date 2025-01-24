@@ -1,72 +1,88 @@
 ---
-import { Image } from "astro:assets";
+import { Image } from 'astro:assets';
 ---
 
-<footer class="w-100 bg-primary fw-bold rounded-top-4 mt-3">
-  <div class="container">
-    <div class="row p-3">
-      <div class="col-2">
-        <div class="d-flex flex-column align-items-center gap-3">
-          <Image src={"/icons/twitter.png"} alt="Logo" width="64" height="64" />
+<footer class='w-100 bg-primary fw-bold rounded-top-4 mt-3'>
+  <div class='container'>
+    <div class='row p-3'>
+      <div class='col-2'>
+        <div class='d-flex flex-column align-items-center gap-3'>
           <Image
-            src={"/icons/facebook.png"}
-            alt="Logo"
-            width="64"
-            height="64"
+            src={'/icons/twitter.png'}
+            alt='Logo'
+            width='48'
+            height='48'
           />
           <Image
-            src={"/icons/instagram.png"}
-            alt="Logo"
-            width="64"
-            height="64"
+            src={'/icons/facebook.png'}
+            alt='Logo'
+            width='48'
+            height='48'
+          />
+          <Image
+            src={'/icons/instagram.png'}
+            alt='Logo'
+            width='48'
+            height='48'
           />
         </div>
       </div>
-      <div class="col-5">
+      <div class='col-5'>
         <h3>CONOCENOS</h3>
-        <ul class="list-unstyled d-flex flex-column gap-2 px-5">
-          <li>Quienes somos</li>
+        <ul class='list-unstyled d-flex flex-column gap-2 px-5'>
+          <li>
+            <a
+              class='nav-link'
+              href='/contacto'
+              >Contacto</a
+            >
+          </li>
           <li>Politicas de devoluciones</li>
           <li>Politicas de compras</li>
         </ul>
       </div>
-      <div class="col-5">
+      <div class='col-5'>
         <h3>ENLACES DE INTERES</h3>
-        <ul class="list-unstyled d-flex flex-column gap-2 px-5">
+        <ul class='list-unstyled d-flex flex-column gap-2 px-5'>
           <li>Antes de comprar</li>
           <li>Mi lista de deseos</li>
           <li>Politicas de cookies</li>
         </ul>
       </div>
     </div>
-    <div class="row m-1">
+    <div class='row m-1'>
       <div
-        class="col-12 d-flex justify-content-around align-items-center gap-3"
+        class='col-12 d-flex justify-content-around align-items-center gap-3'
       >
-        <h3 class="ml-5">FORMAS DE PAGO</h3>
-        <Image src={"/icons/visa.png"} alt="Logo visa" width="48" height="48" />
+        <h3 class='ml-5'>FORMAS DE PAGO</h3>
         <Image
-          src={"/icons/mastercard.png"}
-          alt="Logo mastercard"
-          width="48"
-          height="48"
+          src={'/icons/visa.png'}
+          alt='Logo visa'
+          width='48'
+          height='48'
         />
         <Image
-          src={"/icons/apple-pay.png"}
-          alt="Logo americanexpress"
-          width="48"
-          height="48"
+          src={'/icons/mastercard.png'}
+          alt='Logo mastercard'
+          width='48'
+          height='48'
         />
         <Image
-          src={"/icons/paypal.png"}
-          alt="Logo americanexpress"
-          width="48"
-          height="48"
+          src={'/icons/apple-pay.png'}
+          alt='Logo americanexpress'
+          width='48'
+          height='48'
+        />
+        <Image
+          src={'/icons/paypal.png'}
+          alt='Logo americanexpress'
+          width='48'
+          height='48'
         />
       </div>
     </div>
   </div>
-  <h3 class="text-center bg-dark text-light p-3">
+  <h3 class='text-center bg-dark text-light p-3'>
     Copyrigth &copy; 2024 Funkonnection.com - Todos los derechos reservados
   </h3>
 </footer>

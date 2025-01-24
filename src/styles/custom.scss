@@ -1,10 +1,7 @@
-@import "bootstrap/scss/functions";
+@import 'bootstrap/scss/functions';
 
-$font-family-base: "Montserrat, Sans Serif"; // Fuente base
-$btn-font-family: "Oswald Regular, Sans Serif"; // Fuente de los botones
-
-// TODO Cambiar la sombra de shadow-sm
-$box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); // Sombra de las tarjetas
+$font-family-base: 'Montserrat, Sans Serif'; // Fuente base
+$btn-font-family: 'Oswald Regular, Sans Serif'; // Fuente de los botones
 
 $primary: #f28c28;
 $secondary: #4a6fa5;
@@ -12,11 +9,16 @@ $danger: #e07a5f;
 $light: #f0f4f8;
 $dark: #2d2d2d;
 
+$input-border-color: none !important;
+$input-background-color: $light;
+
+$box-shadow: -3px -3px 30px $primary;
+
 $body-bg: $primary; // Background del body
 
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/mixins";
-@import "bootstrap/scss/bootstrap.scss";
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+@import 'bootstrap/scss/bootstrap.scss';
 
 .nav-link {
   transition: all 0.7s;

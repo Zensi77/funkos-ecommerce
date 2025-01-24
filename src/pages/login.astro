@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title='Login'
+  pageDescription='Pagina de login de Funkonnection'
+>
+  <h2 class='text-center'>Inicio de sesion</h2>
+  <div class='bg-secondary rounded-4 p-5 w-50 mx-auto m-2'>
+    <form action='#'>
+      <div class='form-floating mb-3'>
+        <input
+          type='email'
+          class='form-control'
+          id='floatingInput'
+          placeholder='name@example.com'
+        />
+        <label for='floatingInput'>Email</label>
+      </div>
+      <div class='form-floating'>
+        <input
+          type='password'
+          class='form-control'
+          id='floatingPassword'
+          placeholder='Escribe tu contraseña'
+        />
+        <label for='floatingPassword'>Contraseña</label>
+      </div>
+
+      <button
+        class='btn btn-primary mt-3 w-100'
+        type='submit'
+        >Iniciar sesion</button
+      >
+    </form>
+  </div>
+</Layout>

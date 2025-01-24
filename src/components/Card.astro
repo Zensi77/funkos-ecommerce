@@ -8,21 +8,34 @@ interface Props {
 }
 const { title, subtitle, img, width = 10, imgSize = 150 } = Astro.props;
 
-import { Image } from "astro:assets";
+import { Image } from 'astro:assets';
 ---
 
-<div class="card bg-light shadow-lg" style={`width: ${width}rem;`}>
+<div
+  class='card bg-light shadow-lg'
+  style={`width: ${width}rem;`}
+>
   <Image
-    class="card-img-top p-3"
+    class='card-img-top p-3'
     src={img}
-    alt="Card image cap"
+    alt='Card image cap'
     width={imgSize}
     height={imgSize}
   />
-  <div class="card-body">
-    <h5 class="card-title text-center">{title}</h5>
-    <h6 class="card-subtitle mb-2 text-muted text-center">
+  <div class='card-body'>
+    <h5 class='card-title text-center'>{title}</h5>
+    <h6 class='card-subtitle mb-2 text-muted text-center'>
       {subtitle} $
     </h6>
   </div>
 </div>
+
+<style>
+  .card {
+    transition: transform 0.2s;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+</style>
