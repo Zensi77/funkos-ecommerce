@@ -9,8 +9,10 @@ $danger: #e07a5f;
 $light: #f0f4f8;
 $dark: #2d2d2d;
 
-$input-border-color: none !important;
-$input-background-color: $light;
+$input-bg: $light;
+$input-border-color: $secondary;
+$input-focus-border-color: white;
+$input-color: $dark;
 
 $box-shadow: -3px -3px 30px $primary;
 
@@ -28,3 +30,5 @@ $body-bg: $primary; // Background del body
     transform: scale(1.05);
   }
 }
+
+@import 'hover.css/css/hover-min.css';

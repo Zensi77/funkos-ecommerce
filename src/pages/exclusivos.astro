@@ -1,11 +1,81 @@
 ---
-import Header from '../components/Header.astro';
+import Container from '../components/Container.astro';
 import Layout from '../layouts/Layout.astro';
+import funkos from '../data/funko.json';
+
+const ofertas = funkos
+  .sort(() => 0.5 - Math.random())
+  .slice(1, 5)
+  .map((item) => ({
+    name: item.title,
+    price: `${Math.floor(Math.random() * 100) + 1} $`,
+    img: item.imageName,
+    series: item.series,
+  }));
+
+const coleccionismo = funkos
+  .sort(() => 0.5 - Math.random())
+  .slice(1, 5)
+  .map((item) => ({
+    name: item.title,
+    price: `${Math.floor(Math.random() * 100) + 1} $`,
+    img: item.imageName,
+    series: item.series,
+  }));
 ---
 
 <Layout
   title='Exclusivos'
   pageDescription='Página de funkos exclusivos de Funkonnection'
 >
-  <h1>Hola</h1>
+  <div class='w-100 m-auto mt-3 h-20'>
+    <div class='input-group'>
+      <input
+        type='text'
+        id='exclusiveSearch'
+        class='form-control'
+        placeholder='Introduce el termino de busqueda'
+        aria-label='Search'
+        aria-describedby='basic-addon1'
+      />
+      <button class='input-group-text'>
+        <i class='bi bi-search'></i>
+        <!-- Aquí va el ícono -->
+      </button>
+    </div>
+  </div>
+
+  <div class='d-flex gap-5 w-100 justify-content-around m-auto mt-5'>
+    <button
+      class='btn btn-primary shadow-lg rounded-5 px-4 text-white fw-bold hvr-grow'
+      >Peliculas y series</button
+    >
+    <button class='btn btn-primary rounded-5 px-4 text-white fw-bold hvr-grow'
+      >Videojuegos</button
+    >
+    <button class='btn btn-primary rounded-5 px-4 text-white fw-bold hvr-grow'
+      >Animacion y anime</button
+    >
+    <button class='btn btn-primary rounded-5 px-4 text-white fw-bold hvr-grow'
+      >Music y deportes</button
+    >
+  </div>
+
+  <div class='container-fluid'>
+    <h3 class='text-uppercase my-5'>Ofertas y promociones!!!</h3>
+    <Container
+      articles={ofertas}
+      animation='zoom-out-up'
+      duration='1000'
+      delay='0'
+    />
+
+    <h3 class='text-uppercase my-5'>Ranking de coleccionismo</h3>
+    <Container
+      articles={coleccionismo}
+      animation='zoom-out-up'
+      duration='1000'
+      delay='0'
+    />
+  </div>
 </Layout>

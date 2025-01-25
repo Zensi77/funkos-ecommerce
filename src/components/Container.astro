@@ -2,7 +2,7 @@
 import Card from './Card.astro';
 
 interface Props {
-  title: string;
+  title?: string;
   animation?: string;
   duration?: string;
   delay?: string;
@@ -10,6 +10,7 @@ interface Props {
     name: string;
     price: string;
     img: string;
+    series: string[];
   }>;
 }
 
@@ -23,9 +24,13 @@ const { title, animation, duration, delay, articles } = Astro.props;
   data-aos-delay={delay}
 >
   <div class='row'>
-    <div class='col-3 fw-bold fs-5 text-center align-content-center'>
-      {title}
-    </div>
+    {
+      title && (
+        <div class='col-3 fw-bold fs-5 text-center align-content-center'>
+          {title}
+        </div>
+      )
+    }
     {
       articles.map((article) => {
         return (
@@ -34,6 +39,9 @@ const { title, animation, duration, delay, articles } = Astro.props;
               title={article.name}
               subtitle={article.price}
               img={article.img}
+              series={article.series}
+              width={14}
+              imgSize={200}
             />
           </div>
         );

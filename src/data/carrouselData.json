@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Productos originales",
+        "description": "Todos nuestros productos vienen con su certificado garantizando su completa autenticidad. Seguimos un estricto protocolo ante la venta de replicas.",
+        "img": "/original.jpeg"
+    },
+    {
+        "title": "Envios en 24hs",
+        "description": "Haz tu pedido hoy y recibe tu producto mañana. (Solo aplicable a peninsula, Baleares varia de 3 a 5 dias) Si no lo recibes al dia siguiente recibiras como compensacion un cupon del 5% en tu proxima compra.",
+        "img": "/fast.png"
+    },
+    {
+        "title": "Atencion al cliente",
+        "description": "Nuestro equipo de atencion al cliente esta disponible las 24hs del dia para resolver cualquier duda o problema que puedas tener. No dudes en contactarnos.",
+        "img": "/support.png"
+    },
+    {
+        "title": "Ofertas flash",
+        "description": "No te pierdas nuestras ofertas flash. Todos los dias a las 12:00h y a las 18:00h tendras una oportunidad unica de conseguir tu funko favorito a un precio inigualable.",
+        "img": "/flash.jpeg"
+    },
+    {
+        "title": "Envios gratis",
+        "description": "Realiza una compra superior a 50€ y te enviaremos tu pedido completamente gratis. No dejes pasar esta oportunidad y ahorra en tus envios.",
+        "img": "/envio.jpeg"
+    },
+    {
+        "title": "Catalogo de puntos",
+        "description": "Por cada compra que realices acumularas puntos que podras canjear por descuentos en tus proximas compras. No dejes pasar esta oportunidad y ahorra en tus compras.",
+        "img": "/puntos.jpeg"
+    }
+]
