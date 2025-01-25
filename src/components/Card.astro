@@ -7,6 +7,8 @@ interface Props {
   imgSize?: number;
   series?: string[];
   animationHover?: string;
+  animationScroll?: string;
+  scrollDelay?: string;
 }
 const {
   title,
@@ -14,16 +16,21 @@ const {
   img,
   width = 10,
   imgSize = 150,
-  animationHover = 'hvr-grow',
   series,
+  animationHover = 'hvr-grow',
+  animationScroll,
+  scrollDelay,
 } = Astro.props;
 
 import { Image } from 'astro:assets';
 ---
 
 <div
-  class=`card bg-light shadow-lg ${animationHover}`
+  class=`card bg-light shadow-lg rounded-3 ${animationHover}`
   style={`width: ${width}rem;`}
+  data-aos={animationScroll}
+  data-aos-delay={scrollDelay}
+  data-aos-duration='1000'
 >
   <Image
     class='card-img-top p-3'

@@ -1,10 +1,54 @@
 ---
+// filepath: /c:/Users/USUARIO/Desktop/funkos-ecommerce/src/pages/series.astro
 import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import funkos from '../data/funko.json';
+
+const series = funkos
+  .sort(() => 0.5 - Math.random())
+  .slice(1, 9)
+  .map((item) => ({
+    name: item.title,
+    price: `${Math.floor(Math.random() * 100) + 1} $`,
+    img: item.imageName,
+    series: item.series,
+  }));
 ---
 
 <Layout
-  title='Peliculas'
-  pageDescription='Página de funkos sobre peliculas de Funkonnection'
+  title='Series'
+  pageDescription='Página de funkos sobre series de Funkonnection'
 >
-  <h1>Hola</h1>
+  <div class='w-100 m-auto mt-3 h-20'>
+    <div class='input-group'>
+      <input
+        type='text'
+        id='exclusiveSearch'
+        class='form-control'
+        placeholder='Introduce el termino de busqueda'
+        aria-label='Search'
+        aria-describedby='basic-addon1'
+      />
+      <button class='input-group-text'>
+        <i class='bi bi-search'></i>
+      </button>
+    </div>
+  </div>
+
+  <div class='d-flex flex-wrap gap-5 w-100 justify-content-around m-auto mt-5'>
+    {
+      series.map((serie, index) => (
+        <Card
+          title={serie.name}
+          subtitle={serie.price}
+          img={serie.img}
+          series={serie.series}
+          width={16}
+          imgSize={200}
+          animationScroll='flip-down'
+          scrollDelay={`${index * 5000}ms`}
+        />
+      ))
+    }
+  </div>
 </Layout>
