@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script defer src="js/index.js"></script>
+
+    <title>Gestor de tareas</title>
+</head>
+
+<body>
+    <header>
+        <h1>Gestor de tareas</h1>
+    </header>
+
+    <form id="addTask" class="form-container">
+        <input type="text" placeholder="Titulo" class="form-item" id="title" required>
+        <input type="text" placeholder="Descripción" class="form-item" id="descripcion">
+        <button class="btn-form" type="button" onclick="addTask()">Añadir</button>
+    </form>
+
+    <main>
+        <div class="row-col-3">
+            <div class="col-1">
+                <h1>No iniciadas</h1>
+                <div class="content">
+                </div>
+            </div>
+            <div class="col-2">
+                <h1>En curso</h1>
+                <div class="content">
+                </div>
+            </div>
+            <div class="col-3">
+                <h1>Finalizadas</h1>
+                <div class="content">
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

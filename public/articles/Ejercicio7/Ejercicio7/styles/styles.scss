@@ -1,0 +1,83 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+@for $i from 1 through $num-cols {
+  .row-col-#{$i} {
+    @include gridContainer($i);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  list-style: none;
+  @include spacing();
+}
+
+@for $i from 1 through 3 {
+  .col-#{$i} {
+    h1 {
+      @include boxContainer(3rem, map-get($bg-content-colors, $i));
+      @include textStyle(2rem, 600, map-get($content-colors, $i));
+      margin-block: 1rem;
+      padding: 1rem;
+    }
+
+    .content {
+      @include boxContainer(2rem, map-get($bg-content-colors, $i));
+      margin-block: 1rem;
+      padding: 1rem;
+    }
+  }
+}
+
+body {
+  font-family: sans-serif;
+  margin-inline: 1rem;
+}
+
+header {
+  @include boxContainer(0.5rem, $bg-title);
+  @include textStyle(2rem, 700, $color-title);
+  margin-block: 2rem;
+  padding: 1.5rem;
+}
+
+.card {
+  @include card(1rem, $bg-card, $card-border, $card-color, 1rem, 1rem);
+}
+
+
+.btn-delete {
+  @include button(0.5rem, $bg-btn-delete, 0.5rem);
+  @include textStyle(1.5rem, 1rem, $white);
+  width: 100%;
+
+  &:hover {
+    @include buttonHover($bg-btn-delete-hover);
+  }
+}
+
+.btn-form {
+  @include button(0.5rem, $bg-btn, 0.5rem);
+  @include textStyle(1.5rem, 1rem, $white);
+  width: 100%;
+
+  &:hover {
+    @include buttonHover($bg-btn-hover);
+  }
+}
+
+.form-container {
+  @include formContainer(0.5rem, $bg-form, 0.5rem);
+}
+
+.form-item {
+  @include formItem(0.5rem, $bg-form-item, 0.5rem);
+  @include textStyle(1rem, 400, $card-color);
+}
+
+.select {
+  @include formItem(0.5rem, $bg-form, 0.5rem);
+  @include textStyle(1rem, 400, $card-color);
+  width: 100%;
+}

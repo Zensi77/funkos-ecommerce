@@ -18,6 +18,8 @@ $box-shadow: -3px -3px 30px $primary;
 
 $body-bg: $primary; // Background del body
 
+$btn-hover-bg-tint-amount: 0; // Quito la opacidad del hover de los botones
+
 @import 'bootstrap/scss/variables';
 @import 'bootstrap/scss/mixins';
 @import 'bootstrap/scss/bootstrap.scss';

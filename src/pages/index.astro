@@ -40,7 +40,7 @@ for (let i = 0; i < carrouselData.length; i += 3) {
 >
   <div class='container-fluid'>
     <div class='row mt-5'>
-      <div class='col-10'>
+      <div class='col-11'>
         <Container
           title='FUNKOS MAS VENDIDOS EN STOCK'
           articles={ultimasNovedades}
@@ -49,11 +49,11 @@ for (let i = 0; i < carrouselData.length; i += 3) {
           delay='0'
         />
       </div>
-      <div class='col-2'></div>
+      <div class='col-1'></div>
     </div>
     <div class='row mt-5'>
-      <div class='col-2'></div>
-      <div class='col-10'>
+      <div class='col-1'></div>
+      <div class='col-11'>
         <Container
           title='ULTIMAS NOVEDADES EN STOCK'
           articles={masVendidos}
@@ -81,7 +81,7 @@ for (let i = 0; i < carrouselData.length; i += 3) {
             groups.map((group, index) => (
               <div class={`carousel-item ${index === 0 ? 'active' : ''}`}>
                 <div
-                  class='d-flex gap-5 justify-content-center'
+                  class='d-flex flex-wrap gap-5 justify-content-center'
                   style='height: 400px;'
                 >
                   {group.map((item) => (
@@ -91,6 +91,7 @@ for (let i = 0; i < carrouselData.length; i += 3) {
                       img={item.img}
                       width={16}
                       imgSize={200}
+                      animationHover=''
                     />
                   ))}
                 </div>

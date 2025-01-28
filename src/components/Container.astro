@@ -26,26 +26,31 @@ const { title, animation, duration, delay, articles } = Astro.props;
   <div class='row'>
     {
       title && (
-        <div class='col-3 fw-bold fs-5 text-center align-content-center'>
+        <div class='col-12 col-md-3 fw-bold fs-5 text-center align-content-center mb-3 mb-md-0'>
           {title}
         </div>
       )
     }
-    {
-      articles.map((article) => {
-        return (
-          <div class='col-3 d-flex justify-content-center'>
-            <Card
-              title={article.name}
-              subtitle={article.price}
-              img={article.img}
-              series={article.series}
-              width={14}
-              imgSize={200}
-            />
-          </div>
-        );
-      })
-    }
+    <div class={`col-12 ${title ? 'col-md-9' : ''}`}>
+      <div class='row justify-content-center'>
+        {
+          articles.map((article) => {
+            return (
+              <div class='col-12 col-sm-6 col-md-6 col-lg-3 mb-2 d-flex gap-3 justify-content-center'>
+                <Card
+                  title={article.name}
+                  subtitle={article.price}
+                  img={article.img}
+                  series={article.series}
+                  width={20}
+                  imgSize={250}
+                  animationHover='hvr-float-shadow'
+                />
+              </div>
+            );
+          })
+        }
+      </div>
+    </div>
   </div>
 </div>

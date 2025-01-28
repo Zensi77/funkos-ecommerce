@@ -1,0 +1,66 @@
+// mixin
+@mixin boxContainer($border-radius: 0, $bg-color: #fff) {
+    background-color: $bg-color;
+    border-radius: $border-radius;
+    text-align: center;
+}
+
+@mixin textStyle($font-size: 1rem, $font-weight: 1rem, $color: #000) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+}
+
+@mixin gridContainer($num-cols: 12) {
+    display: grid;
+    grid-template-columns: repeat($num-cols, 1fr);
+    gap: 1rem;
+}
+
+@mixin spacing($margin: 0, $padding: 0) {
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin button($border-radius: 0, $bg-color: #fff, $padding-block: 1rem, $padding-inline: 1rem) {
+    @include boxContainer($border-radius, $bg-color);
+    border: none;
+    padding: $padding-block $padding-inline;
+    cursor: pointer;
+}
+
+@mixin buttonHover($bg-color: #fff) {
+    background-color: $bg-color;
+    transition: .5s;
+}
+
+@mixin formContainer($border-radius: 0, $bg-color: #fff, $padding-block: 1rem, $padding-inline: 1rem) {
+    @include boxContainer($border-radius, $bg-color);
+    padding: $padding-block $padding-inline;
+    margin-block: 1rem;
+    width: 100%;
+}
+
+@mixin formItem($border-radius: 0, $bg-color: #fff, $padding-block: 1rem, $padding-inline: 1rem) {
+    @include boxContainer($border-radius, $bg-color);
+    padding: $padding-block $padding-inline;
+    margin-block: 0.2rem;
+    width: 100%;
+}
+
+@mixin card($border-radius: 0, $bg-color: #fff, $border: 1px solid #000, $color: #000, $padding-block: 1rem, $padding-inline: 1rem) {
+    @include boxContainer($border-radius, $bg-color);
+    border: $border;
+    padding: $padding-block $padding-inline;
+    margin-block: 1rem;
+
+    h2 {
+        @include textStyle(1.5rem, 700);
+        padding-block: 0.5rem;
+    }
+
+    p {
+        @include textStyle(1rem, 400, $color);
+        padding-block: 0.5rem;
+    }
+}
