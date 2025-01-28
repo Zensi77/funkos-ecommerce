@@ -47,7 +47,9 @@ import { Image } from 'astro:assets';
         {
           series &&
             series.map((serie) => (
-              <span class='badge bg-primary text-white mx-1'>{serie}</span>
+              <span class='badge bg-primary text-white mx-1 overflow-hidden'>
+                {serie}
+              </span>
             ))
         }
       </div>
