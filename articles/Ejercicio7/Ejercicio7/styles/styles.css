@@ -1,0 +1,237 @@
+.row-col-1 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+
+.row-col-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.row-col-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.row-col-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.row-col-5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.row-col-6 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+}
+
+.row-col-7 {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1rem;
+}
+
+.row-col-8 {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 1rem;
+}
+
+.row-col-9 {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 1rem;
+}
+
+.row-col-10 {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 1rem;
+}
+
+.row-col-11 {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  gap: 1rem;
+}
+
+.row-col-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.col-1 h1 {
+  background-color: #a476c3;
+  border-radius: 3rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+  margin-block: 1rem;
+  padding: 1rem;
+}
+.col-1 .content {
+  background-color: #a476c3;
+  border-radius: 2rem;
+  text-align: center;
+  margin-block: 1rem;
+  padding: 1rem;
+}
+
+.col-2 h1 {
+  background-color: #efd23e;
+  border-radius: 3rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+  margin-block: 1rem;
+  padding: 1rem;
+}
+.col-2 .content {
+  background-color: #efd23e;
+  border-radius: 2rem;
+  text-align: center;
+  margin-block: 1rem;
+  padding: 1rem;
+}
+
+.col-3 h1 {
+  background-color: #5d64b5;
+  border-radius: 3rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+  margin-block: 1rem;
+  padding: 1rem;
+}
+.col-3 .content {
+  background-color: #5d64b5;
+  border-radius: 2rem;
+  text-align: center;
+  margin-block: 1rem;
+  padding: 1rem;
+}
+
+body {
+  font-family: sans-serif;
+  margin-inline: 1rem;
+}
+
+header {
+  background-color: #bde2b0;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #396c27;
+  margin-block: 2rem;
+  padding: 1.5rem;
+}
+
+.card {
+  background-color: rgba(221, 221, 221, 0.736);
+  border-radius: 1rem;
+  text-align: center;
+  border: 1px solid black;
+  padding: 1rem 1rem;
+  margin-block: 1rem;
+}
+.card h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000;
+  padding-block: 0.5rem;
+}
+.card p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: black;
+  padding-block: 0.5rem;
+}
+
+.btn-delete {
+  background-color: #dc5757;
+  border-radius: 0.5rem;
+  text-align: center;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 1rem;
+  color: #ffffff;
+  width: 100%;
+}
+.btn-delete:hover {
+  background-color: #2b0909;
+  transition: 0.5s;
+}
+
+.btn-form {
+  background-color: #4d75ce;
+  border-radius: 0.5rem;
+  text-align: center;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 1rem;
+  color: #ffffff;
+  width: 100%;
+}
+.btn-form:hover {
+  background-color: #060b16;
+  transition: 0.5s;
+}
+
+.form-container {
+  background-color: #f0f0f0;
+  border-radius: 0.5rem;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  margin-block: 1rem;
+  width: 100%;
+}
+
+.form-item {
+  background-color: #f0f0f0;
+  border-radius: 0.5rem;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  margin-block: 0.2rem;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 400;
+  color: black;
+}
+
+.select {
+  background-color: #f0f0f0;
+  border-radius: 0.5rem;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  margin-block: 0.2rem;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 400;
+  color: black;
+  width: 100%;
+}/*# sourceMappingURL=styles.css.map */

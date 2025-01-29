@@ -1,0 +1,31 @@
+$white: #ffffff;
+
+$bg-title: #bde2b0;
+$color-title: darken($bg-title, 50%);
+
+$bg-content-colors: (
+  1: #a476c3,
+  2: #efd23e,
+  3: #5d64b5
+);
+
+$content-colors: (
+    1: lighten(map-get($bg-content-colors, 1), 50%),
+    2: lighten(map-get($bg-content-colors, 2), 50%),
+    3: lighten(map-get($bg-content-colors, 3), 50%),
+);
+
+$bg-card: rgba(221, 221, 221, 0.736);
+$card-border: 1px solid black;
+$card-color: black;
+
+$bg-btn: #4d75ce;
+$bg-btn-hover: darken($bg-btn, 50%);
+
+$bg-form: #f0f0f0;
+$bg-form-item: #f0f0f0;
+
+$bg-btn-delete: #dc5757;
+$bg-btn-delete-hover: darken($bg-btn-delete, 50%);
+
+$num-cols: 12;

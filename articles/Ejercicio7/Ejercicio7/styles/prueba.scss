@@ -1,0 +1,20 @@
+$num-cols: 12;
+
+$bg-colors: (
+  1: #a476c3,
+  2: #efd23e,
+  3: #5d64b5,
+);
+
+@for $i from 1 through $num-cols {
+  .col-#{$i} {
+    display: grid;
+    grid-template-columns: repeat($i, 1fr);
+  }
+}
+
+@for $i from 1 through 3 {
+  .color-#{i} {
+    background-color: map-get($map: $bg-colors, $key: $i);
+  }
+}
