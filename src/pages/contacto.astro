@@ -7,4 +7,74 @@ import Layout from '../layouts/Layout.astro';
   pageDescription='Página de contacto de Funkonnection'
 >
   <h1>Contacto</h1>
+  <div class='d-flex justify-content-around'>
+    <div data-aos='fade-right'>
+      <iframe
+        src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3795.54673228226!2d-3.603027611313337!3d37.180693474338405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fcc0e7a35331%3A0x588ae3d2aa301839!2sC.%20Zenete%2C%20Albaic%C3%ADn%2C%2018010%20Granada!5e1!3m2!1ses!2ses!4v1738146660791!5m2!1ses!2ses'
+        width='600'
+        height='450'
+        style='border:0;'
+        allowfullscreen=''
+        loading='lazy'
+        referrerpolicy='no-referrer-when-downgrade'
+      ></iframe>
+      <div
+        class='d-flex justify-content-around align-content-center fw-bold bg-white rounded-4 m-auto p-3 w-75 m-2'
+      >
+        <p>C/Zenete S/N Bajo 2</p>
+        <p>+34 123 456 789</p>
+      </div>
+    </div>
+    <div
+      class='d-flex align-content-center bg-white rounded-4 p-5 h-100'
+      data-aos='fade-left'
+      data-aos-easing='ease-in-sine'
+    >
+      <form action='#'>
+        <div class='form-floating mb-3 mt-2'>
+          <input
+            type='text'
+            class='form-control'
+            id='floatingInput'
+            placeholder='Escribe tu nombre'
+          />
+          <label for='floatingInput'>Nombre</label>
+        </div>
+        <div class='form-floating mb-3'>
+          <input
+            type='text'
+            class='form-control'
+            id='floatingInput'
+            placeholder='Escribe tu apellido'
+          />
+          <label for='floatingPassword'>Apellidos</label>
+        </div>
+        <div class='form-floating mb-3'>
+          <input
+            type='text'
+            class='form-control'
+            id='floatingInput'
+            placeholder='Escribe tu email'
+          />
+          <label for='floatingPassword'>Email</label>
+        </div>
+        <div class='form-floating mb-3'>
+          <textarea
+            class='form-control'
+            id='floatingInput'
+            rows="10'"
+            cols='50'
+            placeholder='Escribe tu apellido'
+          ></textarea>
+          <label for='floatingPassword'>Mensaje</label>
+        </div>
+
+        <button
+          class='btn btn-dark mt-3 w-100'
+          type='submit'
+          >Enviar</button
+        >
+      </form>
+    </div>
+  </div>
 </Layout>

@@ -2,11 +2,14 @@
   "name": "y",
   "type": "module",
   "version": "0.0.1",
+  "homepage": "https://zensi77.github.io/funkos-ecommerce",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@astrojs/react": "^4.1.6",
@@ -23,6 +26,8 @@
     "vanta": "^0.5.24"
   },
   "devDependencies": {
-    "@types/aos": "^3.0.7"
+    "@types/aos": "^3.0.7",
+    "@types/node": "^22.12.0",
+    "gh-pages": "^6.3.0"
   }
 }

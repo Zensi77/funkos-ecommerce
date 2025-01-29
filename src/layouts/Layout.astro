@@ -6,7 +6,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import AOSInitializer from '../components/aos-init';
-import CookiesModal from '../components/cookies-modal.jsx';
+import CookiesModal from '../components/cookies-modal';
 
 interface Props {
   title: string;
@@ -49,8 +49,8 @@ const { title, pageDescription } = Astro.props;
     <title>Funkonnection | {title}</title>
   </head>
   <body class='bg-light'>
-    <CookiesModal />
     <Header />
+    <CookiesModal client:only />
     <div class='container text-dark'>
       <Breadcrumbs />
       <slot />

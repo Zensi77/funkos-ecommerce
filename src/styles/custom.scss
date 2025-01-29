@@ -3,22 +3,34 @@
 $font-family-base: 'Montserrat, Sans Serif'; // Fuente base
 $btn-font-family: 'Oswald Regular, Sans Serif'; // Fuente de los botones
 
+// Colores personalizados para la aplicación
 $primary: #f28c28;
 $secondary: #4a6fa5;
 $danger: #e07a5f;
 $light: #f0f4f8;
 $dark: #2d2d2d;
 
-$input-bg: $light;
-$input-border-color: $secondary;
-$input-focus-border-color: white;
-$input-color: $dark;
+$input-bg: $light; // Background del input
+$input-border-color: $secondary; // Borde del input
+$input-color: $dark; // Color del texto del input
+$input-focus-box-shadow: $dark; // Sombra del input al hacer focus
+$input-focus-border-color: $dark; // Borde del input al hacer focus
+$input-border-width: 2px; // Grosor del borde del input
 
-$box-shadow: -3px -3px 30px $primary;
+$box-shadow: -3px -3px 30px $primary; // Sombra de los elementos
 
 $body-bg: $primary; // Background del body
 
 $btn-hover-bg-tint-amount: 0; // Quito la opacidad del hover de los botones
+
+$modal-backdrop-bg: $light; // Background del modal
+$modal-content-bg: $light; // Background del contenido del modal
+$modal-content-color: $dark; // Color del contenido del modal
+$modal-show-transform: scale(1.2); // Escala del modal
+
+$alert-bg-scale: 1.1; // Escala del alert
+$alert-border-width: 2px; // Grosor del borde del alert
+$alert-color-scale: 1.1; // Escala del color del alert
 
 @import 'bootstrap/scss/variables';
 @import 'bootstrap/scss/mixins';
